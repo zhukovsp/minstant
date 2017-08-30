@@ -1,0 +1,161 @@
+<head>
+	<title>minstant</title>
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+
+</body>
+
+<!-- this is the main template used by iron:router to build the page -->
+<template name="ApplicationLayout">
+	{{> yield "main"}}
+</template>
+
+<template name="mainbox">
+	<div class="container chatwrapper">
+	    <div class="row">
+			<div class="col-lg-3 col-sm-6 col-xs-6">
+	            <div class=" btn-panel-conversation btn-panel-top">
+	                <a href="/" class="btn btn-logo col-lg-6 send-message-btn " role="button"><i class="material-icons">chat_bubble_outline</i> Minstant</a>
+	            </div>
+	        </div>
+	        <div class="col-lg-offset-1 col-lg-7">
+	            <div class="btn-panel-msg btn-panel-top">
+	                <div class="btn btn-login col-lg-3  send-message-btn pull-right" role="button">
+	                	<i class="material-icons right">perm_identity</i> <ul class="login-block">{{> loginButtons align="right"}}</ul>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="row">
+	        <div class="conversation-wrap col-lg-3 col-sm-3 col-xs-2">
+	            {{> available_user_list}}
+	        </div>
+	        <div class="message-wrap col-lg-8 col-sm-9 col-xs-10">
+	        	{{> yield "schat"}}
+	        </div>
+        	<div class="box-wrapper1"></div>
+	    </div>
+	</div>
+	{{> specifiaction}}
+</template>
+
+<!-- display a list of users -->
+<template name="available_user_list">
+	{{#each users}}
+	{{> available_user}}
+	{{/each}}
+</template>
+
+<!-- display an individual user -->
+<template name="available_user">
+	{{#if isNotMyUser _id}}
+		<div class="media conversation">
+	        <a class="usercard js-gotochat" href="/chat/{{_id}}">
+	        	<div class="userlist">
+	        		<div class="pull-left avatar_img">
+			            <img class="media-object img-circle" src="/{{profile.avatar}}" style="width: 50px; height: 50px;"/>
+			        </div>
+
+			        <div class="media-body-list">
+			            <h5 class="media-heading">
+			           		{{getUsername _id}}
+			            </h5>
+			            <small><div class="overme">{{#emoji}}{{getlastMessage _id}}{{/emoji}}</div></small>
+			        </div>
+	        	</div>
+	        </a>
+	    </div>
+	{{/if}}
+</template>
+
+
+<!-- Top level template for the chat page -->
+<template name="chat_page">
+	<div class="chat-header"><i class="material-icons">chat</i> <span class="chat-header-text">Chat with</span> <strong>{{other_user.username}}</strong> <img class="media-object avatar_img img-circle" src="/{{other_user.avatar}}"/></div>
+	<div class="msg-wrap">
+
+		{{#each messages}}	
+        <div class="media msg">
+            <a class="pull-left" href="#">
+                <img class="media-object img-circle" src="/{{getUserAvatar userBy}}" style="width: 32px; height: 32px;">
+            </a>
+            <div class="media-body">
+                <small class="pull-right time"><i class="fa fa-clock-o"></i> {{getDate sentOn}}</small>
+
+                <h5 class="media-heading">{{getUserName userBy}}</h5>
+                <small class="col-lg-10 col-sm-10 col-xs-10">{{#emoji}}{{getText text}}{{/emoji}}</small>
+            </div>
+        </div>
+        {{/each}}
+
+    </div>
+    <div class="send-chat-wrap">
+	    <form class="js-send-chat">
+		    <div class="send-wrap ">
+
+		        <textarea class="form-control send-message emojiable-question" id="question" name="chat" rows="3" placeholder="Type a message here..."></textarea>
+
+		    </div>
+		    <div class="btn-panel">
+		        <a href="" class=" col-lg-3 col-sm-3 col-xs-3 btn send-message-btn js-emoji-toggle" role="button"><span id="emojiicon" class="emoji-icon"></span> Emoji</a>
+		        <button class="col-lg-4 col-sm-4 col-xs-4 text-right btn btn-default send-message-btn pull-right"><i class="fa fa-plus"></i> Send Message</button>
+		        
+		    </div>
+		</form>
+	</div>
+</template>
+<template name="chat_page_start">
+	<div class="msg-wrap start">
+		{{#if currentUser}}
+			<div class="nochat">
+				<div class="user-current-avatar"><img class="media-object avatar_img img-circle" src="/{{curUser.avatar}}"></div>
+				<p>You logged in as <strong>{{curUser.username}}</strong><br><i class="material-icons">arrow_back</i> Please select user to chat with</p>
+			</div>
+		{{else}}
+			<div class="nochat nologged"><i class="material-icons">arrow_upward</i> Please sign in first</div>
+		{{/if}}
+	</div>
+</template>
+
+<template name="specifiaction">
+	<div class="modal fade" tabindex="-1" id="myModal" role="dialog">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title">Modal title</h4>
+	      </div>
+	      <div class="modal-body">
+	        <p> you can log in as user1@test.com ... user8@test.com with the password test123.</p>
+
+			<p>Task 1: Improve the look and feel</p>
+
+			<p>Adapt the templates and helper functions so that the messaging window displays users’ avatars next to their messages. Feel free to add other enhancements!</p>
+
+			<p>Task 2: Implement data writing security</p>
+
+			<p>Remove the insecure package from the application and implement a Meteor method to allow the insertion of chat items in the Chats collection. Test that you cannot insert items directly any more.</p>
+
+			<p>Task 3: Implement data reading security</p>
+
+			<p>Remove the autopublish package from the application and implement publish and subscribe for Chats. Users should only be able to retrieve chats that have their user id in either the user1Id field or the user2Id field. Test by logging in as different users and checking what you can see</p>
+
+			<p>Challenge: Implement emoticons</p>
+
+			<p>Can you implement emoticon functionality which allows the user to insert graphical emoticons into their message? Emoticons are small icons such as smiley faces which are typical of this kind of application.</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+</template>
+
+
+
+

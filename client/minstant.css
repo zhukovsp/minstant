@@ -1,0 +1,325 @@
+/* CSS declarations go here */
+
+.user_avatar{
+	min-height:100px;
+	text-align: center;
+
+}
+.avatar_img{
+    height:50;
+	width:55px;
+}
+
+.conversation-wrap
+{
+    padding:0;
+    max-height: 400px;
+    overflow: auto;
+    /*box-shadow: -1px 0 10px #666;*/
+}
+.conversation
+{
+    /*padding:5px;*/
+    border-bottom:1px solid #ddd;
+    margin:0;
+}
+
+.message-wrap
+{
+    padding:0;
+    height:400px;
+    border-left: 1px solid #ddd;
+   /* box-shadow: 0 0 3px #000;*/
+}
+.msg
+{
+    padding:5px;
+    /*border-bottom:1px solid #ddd;*/
+    margin:0;
+}
+.msg-wrap
+{
+    padding:10px;
+    max-height: 235px;
+    overflow: auto;
+}
+.msg-wrap .start
+{
+    max-height: 400px;
+}
+
+.time
+{
+    color:#bfbfbf;
+}
+
+.send-wrap
+{
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding:10px;
+    /*background: #f8f8f8;*/
+}
+
+.send-message
+{
+    resize: none;
+}
+
+.highlight
+{
+    background-color: #f7f7f9;
+    border: 1px solid #e1e1e8;
+}
+
+.send-message-btn
+{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+
+    border-bottom-right-radius: 0;
+}
+.btn-panel
+{
+    background: #f7f7f9;
+}
+
+.btn-panel .btn
+{
+    color:#b8b8b8;
+
+    transition: 0.2s all ease-in-out;
+}
+
+.btn-panel .btn:hover
+{
+    color:#666;
+    background: #f8f8f8;
+    border: 1px solid transparent;
+}
+.btn-panel .btn:active
+{
+    background: #f8f8f8;
+    box-shadow: 0 0 1px #ddd;
+}
+
+.btn-panel-conversation .btn
+{
+    background: #f8f8f8;
+}
+.msg-wrap .media-heading
+{
+    color:#003bb3;
+    font-weight: 700;
+}
+
+
+.msg-date
+{
+    background: none;
+    text-align: center;
+    color:#aaa;
+    border:none;
+    box-shadow: none;
+    border-bottom: 1px solid #ddd;
+}
+
+
+body::-webkit-scrollbar:not(.emojiPicker) {
+    width: 12px;
+}
+
+
+/* Let's get this party started */
+::-webkit-scrollbar:not(.emojiPicker) {
+    width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track:not(.emojiPicker) {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+/*        -webkit-border-radius: 10px;
+    border-radius: 10px;*/
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb:not(.emojiPicker) {
+/*        -webkit-border-radius: 10px;
+    border-radius: 10px;*/
+    background:#ddd; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive:not(.emojiPicker) {
+    background: #ddd; 
+}
+.btn-default{
+    border: 1px solid transparent;
+}
+.nochat{
+	text-align:center;
+	margin-top:120px;
+    position:relative;
+}
+.msg-wrap.start{
+	height:400px;
+    max-height:400px;
+}
+.msg-wrap.start .nochat.nologged{
+    margin-top:180px;
+}
+.media-body img{
+	width:20px;
+	height:auto;
+}
+.conversation .media-body-list small{
+    color:#999;
+}
+.emoji-icon{
+	display:inline-block;
+	max-width: 16px;max-height: 16px;
+	height:16px;
+	width:16px;
+	margin-bottom:-3px;
+	background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMS4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ5MS44NTggNDkxLjg1OCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDkxLjg1OCA0OTEuODU4OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTI0NS45MjksMEMxMTAuMTA2LDAsMCwxMTAuMTA2LDAsMjQ1LjkyOXMxMTAuMTA2LDI0NS45MjksMjQ1LjkyOSwyNDUuOTI5czI0NS45MjktMTEwLjEwNiwyNDUuOTI5LTI0NS45MjkgICAgUzM4MS43NTIsMCwyNDUuOTI5LDB6IE0zNDYuNTM2LDE0NS4zMjFjMTguNTIxLDAsMzMuNTM1LDE1LjAxNCwzMy41MzUsMzMuNTM2cy0xNS4wMTMsMzMuNTM1LTMzLjUzNSwzMy41MzUgICAgUzMxMywxOTcuMzc4LDMxMywxNzguODU4UzMyOC4wMTQsMTQ1LjMyMSwzNDYuNTM2LDE0NS4zMjF6IE0xNDUuMzIxLDE0NS4zMjFjMTguNTIxLDAsMzMuNTM2LDE1LjAxNCwzMy41MzYsMzMuNTM2ICAgIHMtMTUuMDE0LDMzLjUzNS0zMy41MzYsMzMuNTM1cy0zMy41MzYtMTUuMDE0LTMzLjUzNi0zMy41MzVTMTI2LjgwMSwxNDUuMzIxLDE0NS4zMjEsMTQ1LjMyMXogTTI0NS45MjksNDI2LjI3NyAgICBjLTc2LjE0MSwwLTE0MC41NDctNTAuMjMtMTYxLjg5OC0xMTkuMzYxaDMyMy43OTRDMzg2LjQ3NSwzNzYuMDQ2LDMyMi4wNyw0MjYuMjc3LDI0NS45MjksNDI2LjI3N3oiIGZpbGw9IiNjN2M1YzciLz4KCTwvZz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+Cgk8Zz4KCTwvZz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+Cgk8Zz4KCTwvZz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+Cgk8Zz4KCTwvZz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+Cgk8Zz4KCTwvZz4KCTxnPgoJPC9nPgoJPGc+Cgk8L2c+Cgk8Zz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K)
+}
+.emojiPicker{
+	line-height: 2;
+}
+.login-block{
+    display: inline-block;
+    padding-left: 5px;
+    margin-bottom: 0;
+}
+.login-block li{
+    list-style: none;
+}
+
+.btn-login,.btn-panel-top a,.btn-panel-top a:visited
+{
+    color:#f8f8f8;
+    transition: 0.2s all ease-in-out;
+    text-decoration: none;
+}
+
+.btn-login:hover,.btn-logo:hover,.btn-panel-top a:hover
+{
+    color:#fff;
+    /*border: 1px solid transparent;*/
+}
+.btn-login:active,.btn-logo:active,.btn-panel-top a:active
+{
+    background: #f8f8f8;
+    box-shadow: 0 0 1px #ddd;
+}
+
+.btn-login,.btn-logo,.dropdown-menu .btn-primary
+{
+    background: #454D5C !important;
+    border-radius: 0;
+    border-color:#454D5C;
+}
+.dropdown-menu {
+    border-radius: 0;
+}
+.chatwrapper{margin-top:50px;}
+body{
+   
+    background-color: #16a085;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nMjQ1Ljk5OTk5OTk5OTk5OTk3JyBoZWlnaHQ9JzEyNi4wMDAwMDAwMDAwMDAwMScgdmlld0JveD0nMCAwIDQ5LjE5OTk5OTk5OTk5OTk5NiAyNS4yMDAwMDAwMDAwMDAwMDMnPgoJPGRlZnM+CgkJPHBhdGggaWQ9J3MnIGZpbGw9JyNmZmZmZmYnIGQ9J00wLDBsNCAybC00LDJ6Jy8+Cgk8L2RlZnM+Cgk8ZyBpZD0nYic+Cgk8dXNlIHg9Jy00JyB5PSctMicgdHJhbnNmb3JtPSdtYXRyaXgoLTEgMCAwIDEgMCAwKScgZmlsbC1vcGFjaXR5PScwLjA1MjAwMDAwMDAwMDAwMDAwNScgeGxpbms6aHJlZj0nI3MnIC8+Cgk8dXNlIHg9JzAnIHk9JzAuMScgZmlsbC1vcGFjaXR5PScwLjA3OCcgeGxpbms6aHJlZj0nI3MnIC8+Cgk8dXNlIHg9Jy00JyB5PScyLjInIHRyYW5zZm9ybT0nbWF0cml4KC0xIDAgMCAxIDAgMCknIGZpbGwtb3BhY2l0eT0nMC4wNzgnIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PScwJyB5PSc0LjMnIGZpbGwtb3BhY2l0eT0nMC4wNzgnIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PSctNCcgeT0nNi40JyB0cmFuc2Zvcm09J21hdHJpeCgtMSAwIDAgMSAwIDApJyBmaWxsLW9wYWNpdHk9JzAuMTA0MDAwMDAwMDAwMDAwMDEnIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PScwJyB5PSc4LjUnIGZpbGwtb3BhY2l0eT0nMC4wNTIwMDAwMDAwMDAwMDAwMDUnIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PSctNCcgeT0nMTAuNicgdHJhbnNmb3JtPSdtYXRyaXgoLTEgMCAwIDEgMCAwKScgZmlsbC1vcGFjaXR5PScwLjA1MjAwMDAwMDAwMDAwMDAwNScgeGxpbms6aHJlZj0nI3MnIC8+Cgk8dXNlIHg9JzQuMScgeT0nLTInIGZpbGwtb3BhY2l0eT0nMC4wNzgnIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PSctOC4xJyB5PScwLjEnIHRyYW5zZm9ybT0nbWF0cml4KC0xIDAgMCAxIDAgMCknIGZpbGwtb3BhY2l0eT0nMC4xMDQwMDAwMDAwMDAwMDAwMScgeGxpbms6aHJlZj0nI3MnIC8+Cgk8dXNlIHg9JzQuMScgeT0nMi4yJyBmaWxsLW9wYWNpdHk9JzAuMDc4JyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nLTguMScgeT0nNC4zJyB0cmFuc2Zvcm09J21hdHJpeCgtMSAwIDAgMSAwIDApJyBmaWxsLW9wYWNpdHk9JzAuMDUyMDAwMDAwMDAwMDAwMDA1JyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nNC4xJyB5PSc2LjQnIGZpbGwtb3BhY2l0eT0nMC4wMjYwMDAwMDAwMDAwMDAwMDInIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PSctOC4xJyB5PSc4LjUnIHRyYW5zZm9ybT0nbWF0cml4KC0xIDAgMCAxIDAgMCknIGZpbGwtb3BhY2l0eT0nMC4wNTIwMDAwMDAwMDAwMDAwMDUnIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PSc0LjEnIHk9JzEwLjYnIGZpbGwtb3BhY2l0eT0nMC4wNzgnIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PSctMTIuMicgeT0nLTInIHRyYW5zZm9ybT0nbWF0cml4KC0xIDAgMCAxIDAgMCknIGZpbGwtb3BhY2l0eT0nMC4wNTIwMDAwMDAwMDAwMDAwMDUnIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PSc4LjInIHk9JzAuMScgZmlsbC1vcGFjaXR5PScwLjA1MjAwMDAwMDAwMDAwMDAwNScgeGxpbms6aHJlZj0nI3MnIC8+Cgk8dXNlIHg9Jy0xMi4yJyB5PScyLjInIHRyYW5zZm9ybT0nbWF0cml4KC0xIDAgMCAxIDAgMCknIGZpbGwtb3BhY2l0eT0nMC4wNzgnIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PSc4LjInIHk9JzQuMycgZmlsbC1vcGFjaXR5PScwLjA1MjAwMDAwMDAwMDAwMDAwNScgeGxpbms6aHJlZj0nI3MnIC8+Cgk8dXNlIHg9Jy0xMi4yJyB5PSc2LjQnIHRyYW5zZm9ybT0nbWF0cml4KC0xIDAgMCAxIDAgMCknIGZpbGwtb3BhY2l0eT0nMC4wMjYwMDAwMDAwMDAwMDAwMDInIHhsaW5rOmhyZWY9JyNzJyAvPgkKCTx1c2UgeD0nOC4yJyB5PSc4LjUnIGZpbGwtb3BhY2l0eT0nMC4wNTIwMDAwMDAwMDAwMDAwMDUnIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PSctMTIuMicgeT0nMTAuNicgdHJhbnNmb3JtPSdtYXRyaXgoLTEgMCAwIDEgMCAwKScgZmlsbC1vcGFjaXR5PScwLjA1MjAwMDAwMDAwMDAwMDAwNScgeGxpbms6aHJlZj0nI3MnIC8+Cgk8dXNlIHg9JzEyLjI5OTk5OTk5OTk5OTk5OScgeT0nLTInIGZpbGwtb3BhY2l0eT0nMC4wNTIwMDAwMDAwMDAwMDAwMDUnIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PSctMTYuMjk5OTk5OTk5OTk5OTk3JyB5PScwLjEnIHRyYW5zZm9ybT0nbWF0cml4KC0xIDAgMCAxIDAgMCknIGZpbGwtb3BhY2l0eT0nMC4wNTIwMDAwMDAwMDAwMDAwMDUnIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PScxMi4yOTk5OTk5OTk5OTk5OTknIHk9JzIuMicgZmlsbC1vcGFjaXR5PScwLjAyNjAwMDAwMDAwMDAwMDAwMicgeGxpbms6aHJlZj0nI3MnIC8+Cgk8dXNlIHg9Jy0xNi4yOTk5OTk5OTk5OTk5OTcnIHk9JzQuMycgdHJhbnNmb3JtPSdtYXRyaXgoLTEgMCAwIDEgMCAwKScgZmlsbC1vcGFjaXR5PScwLjA3OCcgeGxpbms6aHJlZj0nI3MnIC8+Cgk8dXNlIHg9JzEyLjI5OTk5OTk5OTk5OTk5OScgeT0nNi40JyBmaWxsLW9wYWNpdHk9JzAuMDc4JyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nLTE2LjI5OTk5OTk5OTk5OTk5NycgeT0nOC41JyB0cmFuc2Zvcm09J21hdHJpeCgtMSAwIDAgMSAwIDApJyBmaWxsLW9wYWNpdHk9JzAuMDI2MDAwMDAwMDAwMDAwMDAyJyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nMTIuMjk5OTk5OTk5OTk5OTk5JyB5PScxMC42JyBmaWxsLW9wYWNpdHk9JzAuMDUyMDAwMDAwMDAwMDAwMDA1JyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nLTIwLjQnIHk9Jy0yJyB0cmFuc2Zvcm09J21hdHJpeCgtMSAwIDAgMSAwIDApJyBmaWxsLW9wYWNpdHk9JzAuMDc4JyB4bGluazpocmVmPScjcycgLz4JCgk8dXNlIHg9JzE2LjQnIHk9JzAuMScgZmlsbC1vcGFjaXR5PScwLjEwNDAwMDAwMDAwMDAwMDAxJyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nLTIwLjQnIHk9JzIuMicgdHJhbnNmb3JtPSdtYXRyaXgoLTEgMCAwIDEgMCAwKScgZmlsbC1vcGFjaXR5PScwLjAyNjAwMDAwMDAwMDAwMDAwMicgeGxpbms6aHJlZj0nI3MnIC8+Cgk8dXNlIHg9JzE2LjQnIHk9JzQuMycgZmlsbC1vcGFjaXR5PScwLjA1MjAwMDAwMDAwMDAwMDAwNScgeGxpbms6aHJlZj0nI3MnIC8+Cgk8dXNlIHg9Jy0yMC40JyB5PSc2LjQnIHRyYW5zZm9ybT0nbWF0cml4KC0xIDAgMCAxIDAgMCknIGZpbGwtb3BhY2l0eT0nMC4wNzgnIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PScxNi40JyB5PSc4LjUnIGZpbGwtb3BhY2l0eT0nMC4wMjYwMDAwMDAwMDAwMDAwMDInIHhsaW5rOmhyZWY9JyNzJyAvPgoJPHVzZSB4PSctMjAuNCcgeT0nMTAuNicgdHJhbnNmb3JtPSdtYXRyaXgoLTEgMCAwIDEgMCAwKScgZmlsbC1vcGFjaXR5PScwLjA3OCcgeGxpbms6aHJlZj0nI3MnIC8+Cgk8dXNlIHg9JzIwLjUnIHk9Jy0yJyBmaWxsLW9wYWNpdHk9JzAuMDUyMDAwMDAwMDAwMDAwMDA1JyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nLTI0LjQ5OTk5OTk5OTk5OTk5NicgeT0nMC4xJyB0cmFuc2Zvcm09J21hdHJpeCgtMSAwIDAgMSAwIDApJyBmaWxsLW9wYWNpdHk9JzAuMDUyMDAwMDAwMDAwMDAwMDA1JyB4bGluazpocmVmPScjcycgLz4JCgk8dXNlIHg9JzIwLjUnIHk9JzIuMicgZmlsbC1vcGFjaXR5PScwLjEwNDAwMDAwMDAwMDAwMDAxJyB4bGluazpocmVmPScjcycgLz4KCTx1c2UgeD0nLTI0LjQ5OTk5OTk5OTk5OTk5NicgeT0nNC4zJyB0cmFuc2Zvcm09J21hdHJpeCgtMSAwIDAgMSAwIDApJyBmaWxsLW9wYWNpdHk9JzAuMDUyMDAwMDAwMDAwMDAwMDA1JyB4bGluazpocmVmPScjcycgLz4JCgk8dXNlIHg9JzIwLjUnIHk9JzYuNCcgZmlsbC1vcGFjaXR5PScwLjA3OCcgeGxpbms6aHJlZj0nI3MnIC8+Cgk8dXNlIHg9Jy0yNC40OTk5OTk5OTk5OTk5OTYnIHk9JzguNScgdHJhbnNmb3JtPSdtYXRyaXgoLTEgMCAwIDEgMCAwKScgZmlsbC1vcGFjaXR5PScwLjA1MjAwMDAwMDAwMDAwMDAwNScgeGxpbms6aHJlZj0nI3MnIC8+Cgk8dXNlIHg9JzIwLjUnIHk9JzEwLjYnIGZpbGwtb3BhY2l0eT0nMC4wNTIwMDAwMDAwMDAwMDAwMDUnIHhsaW5rOmhyZWY9JyNzJyAvPgoJPC9nPgoJPHVzZSB4PSctMjQuNDk5OTk5OTk5OTk5OTk2JyB5PScxMi42MDAwMDAwMDAwMDAwMDEnIHRyYW5zZm9ybT0nbWF0cml4KC0xIDAgMCAxIDAgMCknIHhsaW5rOmhyZWY9JyNiJyAvPgoJPHVzZSB4PSctNDkuMDk5OTk5OTk5OTk5OTk0JyB5PSctOC40JyB0cmFuc2Zvcm09J21hdHJpeCgtMSAwIDAgLTEgMCAwKScgeGxpbms6aHJlZj0nI2InIC8+Cgk8dXNlIHg9JzI0LjU5OTk5OTk5OTk5OTk5OCcgeT0nLTE2LjgnIHRyYW5zZm9ybT0nbWF0cml4KDEgMCAwIC0xIDAgMCknIHhsaW5rOmhyZWY9JyNiJyAvPgoJPHVzZSB4PScyNC41OTk5OTk5OTk5OTk5OTgnIHk9Jy0yOS40MDAwMDAwMDAwMDAwMDInIHRyYW5zZm9ybT0nbWF0cml4KDEgMCAwIC0xIDAgMCknIHhsaW5rOmhyZWY9JyNiJyAvPgo8L3N2Zz4K');
+
+}
+.conversation-wrap,.message-wrap,.msg-wrap{
+    background-color: #fff;
+}
+.chat-header{
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+    color: #666;
+    background-color: #f8f8f8;
+}
+.material-icons{
+    vertical-align: middle;
+    font-size: 20px !important;
+}
+.dropdown-menu a{
+    color:#454D5C;
+}
+.dropdown-menu a:hover{
+    color:#454D5C;
+    text-decoration: underline;
+    border:none;
+}
+.send-chat-wrap{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    background-color:#fff;
+}
+.emojiPickerIconWrap{
+    display:block;
+}
+.box-wrapper1{
+    box-shadow: -1px 0 10px #747B87;
+    z-index: -1;
+}
+.box-wrapper2{
+    box-shadow: -1px 0 10px #747B87;
+    z-index: -1;
+}
+.boxwrapper{
+    box-shadow: -1px 0 10px #747B87;
+}
+textarea.form-control {
+    width: 100% !important;
+}
+.chat-header .avatar_img{
+    width: 20px; height: 20px;display:inline
+}
+.chat-header-text{
+    font-size:0.9em;
+}
+.animate {
+    text-align: right;
+    margin-top: 10px;
+    margin-right:10px;
+    position: relative;
+}
+.user-current-avatar{
+    margin:0 auto;
+    display:inline-block;
+}
+.dropdown-menu{
+    left:-170px !important;
+}
+@media (max-width:768px){
+    .conversation .media-body-list small{
+        display:none;
+    }
+}
+.overme {
+    width: 70%;
+    overflow:hidden; 
+    white-space:nowrap; 
+    text-overflow: ellipsis;
+}
+.overme img{
+    height:16px;
+}
+.userlist{
+    padding:5px 5px 18px 5px;
+    display:list-item;
+    list-style:none;
+}
+.conversation a:hover,.conversation a:visited,.conversation a:link{
+    text-decoration:none;
+}
+.userlist:hover{
+    background-color:#f8f8f8;
+}
+.send-chat-wrap .send-message-btn.pull-right{
+    border-left: 1px solid #f8f8f8;
+}
+.js-emoji-toggle{
+    border-right: 1px solid #f8f8f8;
+}
